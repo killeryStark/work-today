@@ -1,4 +1,5 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from loader import db
 
 menu = ReplyKeyboardMarkup(
     keyboard=[
@@ -11,8 +12,19 @@ menu = ReplyKeyboardMarkup(
             KeyboardButton(text="☀️Сегодня")
         ],
         [
+            KeyboardButton(text="📕Журнал"),
+            KeyboardButton(text="💾Сохраненое")
+        ],
+        [
+            KeyboardButton(text="Добавить категорию")
+        ],
+        [
             KeyboardButton(text="📈Статистика"),
             KeyboardButton(text="⚙️Настройки")
+        ],
+        [
+            KeyboardButton(text="📜Информация"),
+            KeyboardButton(text="💎Донейт")
         ]
     ],
     resize_keyboard=True
