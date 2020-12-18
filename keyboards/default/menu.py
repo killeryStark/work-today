@@ -16,11 +16,17 @@ menu = ReplyKeyboardMarkup(
             KeyboardButton(text="💾Сохраненое")
         ],
         [
-            KeyboardButton(text="Добавить категорию")
+            KeyboardButton(text="➕Добавить категорию")
+        ],
+        [
+            KeyboardButton(text="🗂Категории")
         ],
         [
             KeyboardButton(text="📈Статистика"),
             KeyboardButton(text="⚙️Настройки")
+        ],
+        [
+            KeyboardButton(text="🈸Переводчик")
         ],
         [
             KeyboardButton(text="📜Информация"),

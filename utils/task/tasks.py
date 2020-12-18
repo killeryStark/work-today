@@ -6,10 +6,12 @@ import pytz
 
 from handlers.errors import exceptions
 
+
 class Message(NamedTuple):
     """Структура распаршенного сообщения о новом расходе"""
     amount: int
     category_text: str
+
 
 class Category(NamedTuple):
     """Структура категории"""
@@ -17,6 +19,7 @@ class Category(NamedTuple):
     name: str
     is_base_expense: bool
     aliases: List[str]
+
 
 class Expense(NamedTuple):
     """Структура добавленного в БД нового расхода"""
@@ -59,6 +62,37 @@ class Tasks():
               f"id{post['_id']}"
         return msg
 
+    def format_jornal(self, post):
+        tags = post['tags']
+        remind = post['remind']
+        today = post['today']
+        if tags == "":
+            tags = ""
+        else:
+            tags = f"<u>Теги:</u> {tags}"
+
+        if remind == "":
+            remind = ""
+        else:
+            remind = f"<u>Напоминание:</u> {remind}"
+
+        if today == 1:
+            today = "☀️Сегодня"
+        else:
+            today = ""
+
+        date = post["date_create"]
+        msg = f"<b>{post['task']}</b>\n" \
+              f"Заметка: {post['notes']}\n" \
+              f"{today}\n" \
+              f"<u>Категория:</u> {post['category']}\n" \
+              f"{tags}\n" \
+              f"{remind}\n" \
+              f"<u>Создана:</u> {date}\n" \
+              f"<u>Выполнена</u>\n" \
+              f"id{post['_id']}"
+        return msg
+
     def find_task(self, text):
         return text[-24:]
 
@@ -74,7 +108,7 @@ class Tasks():
         category_text = regexp_result.group(2).strip().lower()
         return Message(amount=amount, category_text=category_text)
 
-    def fill_aliases(self, categories,):
+    def fill_aliases(self, categories, ):
         """Заполняет по каждой категории aliases, то есть возможные
         названия этой категории, которые можем писать в тексте сообщения.
         Например, категория «кафе» может быть написана как cafe,

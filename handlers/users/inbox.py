@@ -8,8 +8,7 @@ from loader import dp, db, tasks
 async def add_task(message: types.Message):
     id = message.from_user.id
     post = db.check_task_inbox(int(id))
-    await message.answer("______________\n"
-                         "<b>ВХОДЯЩИЕ</b>\n"
+    await message.answer("<b>ВХОДЯЩИЕ</b>\n"
                          "______________")
     for msg in post:
         if msg["today"] == 0:

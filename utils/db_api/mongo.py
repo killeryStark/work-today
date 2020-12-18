@@ -79,3 +79,7 @@ class Database:
     def check_expenses(self, id):
         connections = self.connections
         return connections.expenses.find({"user_id": id})
+
+    def check_jornal(self, id):
+        connections = self.connections
+        return connections.tasks.find({"user_id": id, "done": 1})

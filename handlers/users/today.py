@@ -9,8 +9,7 @@ from loader import dp, db, tasks
 async def add_task(message: types.Message):
     id = message.from_user.id
     post = db.check_task_today(int(id))
-    await message.answer("______________\n"
-                         "<b>СЕГОДНЯ</b>\n"
+    await message.answer("<b>СЕГОДНЯ</b>\n"
                          "______________")
     for msg in post:
         if msg["today"] == 1:

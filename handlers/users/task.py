@@ -144,7 +144,7 @@ async def ad_notes(message: types.Message, state: FSMContext):
 @dp.callback_query_handler(text="remind")
 async def remind(call: CallbackQuery, state: FSMContext):
     await call.answer(cache_time=5)
-    await call.message.answer("Добавить напоминание"
+    await call.message.answer("Добавить напоминание\n"
                               "Введите в формате: 2020-11-28 03:01")
     text = call.message.text
     id = tasks.find_task(text)
@@ -168,19 +168,19 @@ async def add_remind(message: types.Message, state: FSMContext):
     await state.finish()
 
 
-def check_remind():
-    while True:
-        users = db.load_users()
-        for u in users:
-            id = users["_id"]
-            tasks = db.find_task(id)
-            for t in tasks:
-                time_task = tasks.get_now_formatted()
-                if t["remind"] >= time_task:
-                    task = tasks.format_task(t)
-                    if task['today'] == 1:
-                        keyboard = today_button
-                    else:
-                        keyboard = task_button
-                    bot.send_message(id, tasks, reply_markup=keyboard)
-                    time.sleep(30)
+# def check_remind():
+#     while True:
+#         users = db.load_users()
+#         for u in users:
+#             id = users["_id"]
+#             tasks = db.find_task(id)
+#             for t in tasks:
+#                 time_task = tasks.get_now_formatted()
+#                 if t["remind"] >= time_task:
+#                     task = tasks.format_task(t)
+#                     if task['today'] == 1:
+#                         keyboard = today_button
+#                     else:
+#                         keyboard = task_button
+#                     bot.send_message(id, tasks, reply_markup=keyboard)
+#                     time.sleep(30)
