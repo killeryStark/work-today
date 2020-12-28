@@ -5,7 +5,7 @@ from loader import dp, db, tasks
 
 
 @dp.message_handler(text="📕Журнал")
-async def add_task(message: types.Message):
+async def jornal(message: types.Message):
     id = message.from_user.id
     post = db.check_jornal(int(id))
     await message.answer("<b>Журнал</b>\n"

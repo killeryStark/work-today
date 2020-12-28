@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d1c2995-6d68-4084-869e-578f2560ed07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/handlers/users/jornal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/users/add_category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/users/category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keyboards/default/category_task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/states/add_category_state.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/work-today.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/work-today.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/users/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/users/inbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/users/inbox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/users/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/users/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/users/today.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/users/today.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/users/jornal.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/users/jornal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/keyboards/default/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/default/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/states/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/db_api/mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/db_api/mongo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/task/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/task/tasks.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +36,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app.py" />
@@ -84,5 +89,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -83,3 +83,7 @@ class Database:
     def check_jornal(self, id):
         connections = self.connections
         return connections.tasks.find({"user_id": id, "done": 1})
+
+    def add_category(self, id, category):
+        connections = self.connections
+        connections.category_tasks.insert_one({"user_id": id, "category": category})

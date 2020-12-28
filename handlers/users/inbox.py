@@ -14,4 +14,5 @@ async def add_task(message: types.Message):
         if msg["today"] == 0:
             msg = tasks.format_task(msg)
             await message.answer(msg, reply_markup=task_button)
-        else: pass
+        else:
+            pass
